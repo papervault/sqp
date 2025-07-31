@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CBSE Sample Papers 2025 - 26 </title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .logo {
+      width: 180px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    p.description {
+      text-align: center;
+      max-width: 600px;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .button-column {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 2rem;
+    }
+
+    .download-btn {
+      background-color: #f7c948;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1e3c72;
+      padding: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin: 0.5rem 0;
+      width: 100%;
+    }
+
+    .download-btn:hover {
+      background-color: #f0b429;
+    }
+
+    .download-btn:disabled {
+      background-color: #ccc;
+      color: #555;
+      cursor: not-allowed;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      margin: 1.5rem 0 0.5rem;
+      text-align: center;
+    }
+
+    .back-button {
+      margin-top: 2rem;
+      padding: 0.8rem 2rem;
+      background-color: #f7c948;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1e3c72;
+      cursor: pointer;
+      transition: 0.3s ease;
+      border: none;
+    }
+
+    .back-button:hover {
+      background-color: #f0b429;
+    }
+
+    footer {
+      margin-top: auto;
+      padding-top: 2rem;
+      font-size: 0.9rem;
+      color: #ccc;
+      text-align: center;
+      width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p.description {
+        font-size: 1rem;
+        padding: 0 1rem;
+      }
+
+      .download-btn {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <img src="https://raw.githubusercontent.com/papervault/vault/refs/heads/main/logo.png" alt="Paper Vault Logo" class="logo" />
+  <h1>CBSE Sample Papers 2025</h1>
+  <p class="description">Download the official CBSE Sample Question Papers and Marking Schemes released on 30th July 2025.</p>
+
+  <div class="section-title">Sample Question Papers</div>
+  <div class="button-column">
+    <button class="download-btn" onclick="downloadFile('sqp/english.pdf')">English</button>
+    <button class="download-btn" onclick="downloadFile('sqp/science.pdf')">Science</button>
+    <button class="download-btn" onclick="downloadFile('sqp/math.pdf')">Mathematics Standard</button>
+    <button class="download-btn" onclick="downloadFile('sqp/socialscience.pdf')">Social Science</button>
+    <button class="download-btn" onclick="downloadFile('sqp/hindib.pdf')">Hindi B</button>
+    <button class="download-btn" onclick="downloadFile('sqp/marathi.pdf')">Marathi</button>
+    <button class="download-btn" disabled>Information Technology – Not released yet</button>
+  </div>
+
+  <div class="section-title">Marking Schemes (Answers)</div>
+  <div class="button-column">
+    <button class="download-btn" onclick="downloadFile('sqp/english-ms.pdf')">English</button>
+    <button class="download-btn" onclick="downloadFile('sqp/science-ms.pdf')">Science</button>
+    <button class="download-btn" onclick="downloadFile('sqp/math-ms.pdf')">Mathematics Standard</button>
+    <button class="download-btn" onclick="downloadFile('sqp/socialscience-ms.pdf')">Social Science</button>
+    <button class="download-btn" onclick="downloadFile('sqp/hindib-ms.pdf')">Hindi B</button>
+    <button class="download-btn" onclick="downloadFile('sqp/marathi-ms.pdf')">Marathi</button>
+    <button class="download-btn" disabled>Information Technology – Not released yet</button>
+  </div>
+
+  <button onclick="window.location.href='https://papervault.github.io/vault/'" class="back-button">← Back to Vault</button>
+
+  <footer>Website by Arnav Thete | Made with Github</footer>
+
+  <script>
+    function downloadFile(path) {
+      const link = document.createElement("a");
+      link.href = path;
+      link.download = path.split("/").pop();
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+</body>
+</html>
